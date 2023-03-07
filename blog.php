@@ -1,7 +1,11 @@
+<?php 
+session_start();
+if($_SESSION["key"]==1){ 
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="styleblog.css">
+        <link rel="stylesheet" href="styling/styleblog.css">
     </head>
     <body>
         <header id="header">
@@ -11,10 +15,10 @@
         <nav id="nav">
             <ul>
                 <li>
-                    <a href="index.php" target="_blank">Home</a>
-                    <a href="#" target="_blank">blogs</a>
+                    <a href="index.php" >Home</a>
+                    <a href="#" >blogs</a>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Contact Us</a>  
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Profile</a>
+                    <a href="profile.php">Profile</a>
                 </li>
             </ul>
         </nav>
@@ -30,7 +34,7 @@
                 <h4>Body:</h4><textarea name="blog" rows="10" cols="50" placeholder="your blog"></textarea>
                 <br>
                 <br>
-                <h4>Author:</h4><input type="text" name="author" placeholder="the author">
+                <h4>Author:<?php echo " ".$_SESSION["username"]; ?></h4>
                 <br>
                 <br>
                 <input type="submit">
@@ -43,7 +47,6 @@
             if (isset($_GET['afterSubmition'])) {
                 echo "sucess ";
             }
-            
             ?>
     <br>
     <br>
@@ -57,3 +60,4 @@
     
 </body>
 </html>
+<?php } ?>

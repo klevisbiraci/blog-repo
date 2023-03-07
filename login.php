@@ -2,13 +2,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styling/styleloginform.css">
 </head>
 <body>
+<header id="header">
+    <h1>Log in</h1>
+</header>
+<div class="form">
     <form action="login.php" method="get">
-        Username:<input type="text" name="user">
-        Password:<input type="password" name="pass">
+        <h4>Username:</h4><input type="text" name="user">
+        <br>
+        <br>
+        <h4>Password:</h4><input type="password" name="pass">
+        <br>
+        <br>
         <input type="submit" name="login">
     </form>
+</div>
+    <a id="link" href="signin.php">Singin</a>
     <?php
     $servername = "localhost";
     $username = "root";
@@ -29,6 +40,7 @@
                 $_SESSION["key"] = 1;
                 if($_SESSION["key"] == 1){
                     header("Location: index.php");
+                    $_SESSION["username"] = $_GET["user"];
                 }
             }else{
                 echo "username or password is wrong ";
@@ -39,7 +51,8 @@
     if(isset($_GET["isLogedOut"])){
         $_SESSION["key"] = 0;
     }
-        ?>
-    <a href="signin.php">Singin</a>
+
+    $conn->close(); 
+    ?>
 </body>
 </html>

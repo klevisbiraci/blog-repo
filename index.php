@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="styleidnex.css">
+    <link rel="stylesheet" href="styling/styleidnex.css">
 </head>
 <body>
     <header id="header">
@@ -16,10 +16,10 @@
                 <?php if($_SESSION["key"] == 1){ ?>
                     <a href="blog.php" >blogs</a>
                 <?php }else{ ?>
-                    <a href="login.php" target="_blank">blogs</a>
+                    <a href="login.php" >blogs</a>
                 <?php } ?>    
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Contact Us</a>  
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Profile</a>
+                <a href="profile.php">Profile</a>
             </li>
         </ul>
     </nav>

@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <link rel="stylesheet" href="styling/styleloginform.css">
 </head>
 <body>
-<form action="signin.php" method="get">
-        Username:<input type="text" name="user">
-        Password:<input type="password" name="pass">
+<header id="header">
+    <h1>Sign in</h1>
+</header>
+<div class="form">
+    <form action="signin.php" method="get">
+        <h4>Username:</h4><input type="text" name="user">
+        <br>
+        <br>
+        <h4>Password:</h4><input type="password" name="pass">
+        <br>
+        <br>
         <input type="submit" name="signin">
     </form>
+</div>    
+<a id="link" href="login.php">Login</a>
     <?php
     $servername = "localhost";
     $username = "root";
@@ -32,7 +43,6 @@
     }
     $conn->close();
     ?>
-    <a href="login.php">Login</a>
-    
+
 </body>
 </html>

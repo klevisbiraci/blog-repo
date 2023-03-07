@@ -1,0 +1,54 @@
+#header{
+    background: orange;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+}
+
+#nav li{
+    list-style: none;
+}
+
+#nav a{
+    text-decoration: none;
+    padding-left: 15px;
+    color: white;
+}
+
+#nav ul{
+    background-color: black;
+    margin: auto;
+    padding: 7px;
+
+}
+
+#form{
+    padding: 20px;
+    background-image: url(../images/cat.jpeg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    border:2px black solid;
+}
+
+#form input{
+    background-color: rgba(211, 211, 211, 0.377);
+    color: black;
+}
+
+#form textarea{
+    background-color: rgba(211, 211, 211, 0.377);
+    color: black;
+}
+
+#footer h2{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+    
